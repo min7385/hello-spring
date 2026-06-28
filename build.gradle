@@ -1,0 +1,31 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.5.15'
+	id 'io.spring.dependency-management' version '1.1.7'
+}
+
+group = 'com.hello'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(17)
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+// 여기 dependency한건 2가지 뿐이지만(자동으로 되는 test~는 제외)
+// 라이브러리가 라이브러리를 의존해서 Extermal Libraries에 굉장히 많이 있는걸 볼 수 있다.
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
