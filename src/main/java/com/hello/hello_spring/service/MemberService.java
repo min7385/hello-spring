@@ -7,9 +7,18 @@ import com.hello.hello_spring.repository.MemoryMemberRepository;
 import java.util.List;
 import java.util.Optional;
 
+// ctrl + shift + T: 테이스 케이스 생성
 public class MemberService {
 
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
+    // 기존: MemberService가 MemoryMemberRepository를 직접 생성하게 함.
+    // private final MemberRepository memberRepository = new MemoryMemberRepository();
+
+    // 신규: 의존성 주입 가능하게 변경함.
+    private final MemberRepository memberRepository;
+
+    public MemberService(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
 
     /*
      * 회원가입
