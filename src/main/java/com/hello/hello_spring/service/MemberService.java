@@ -2,12 +2,14 @@ package com.hello.hello_spring.service;
 
 import com.hello.hello_spring.domain.Member;
 import com.hello.hello_spring.repository.MemberRepository;
-import com.hello.hello_spring.repository.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
 // ctrl + shift + T: 테이스 케이스 생성
+@Service
 public class MemberService {
 
     // 기존: MemberService가 MemoryMemberRepository를 직접 생성하게 함.
@@ -16,6 +18,7 @@ public class MemberService {
     // 신규: 의존성 주입 가능하게 변경함.
     private final MemberRepository memberRepository;
 
+    @Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
