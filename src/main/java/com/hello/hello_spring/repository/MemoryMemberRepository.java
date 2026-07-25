@@ -7,7 +7,6 @@ import java.util.*;
 
 // 인터페이스를 상속받아 구현
 // 데이터베이스가 정해지기 이전으로(가정), 메모리에 회원정보를 저장
-@Repository
 public class MemoryMemberRepository implements MemberRepository{
 
     private static Map<Long, Member> store = new HashMap<>();
