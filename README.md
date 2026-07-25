@@ -45,3 +45,15 @@
 
 </div>
 </details>
+
+<details>
+<summary>18강 - 회원 웹기능_등록</summary>
+<div markdown="1">
+
+## GET과 POST 요청 구분
+같은 URL이라도 HTTP 메서드에 따라 동작이 달라진다.
+- **GET**: 주로 데이터를 **조회**할 때 사용한다.
+- **POST**: 주로 데이터를 **등록**할 때 사용한다.
+
+</div>
+</details>
