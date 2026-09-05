@@ -10,7 +10,7 @@ public interface MemberRepository {
 
     // 찾는 id가 없을 때, null이 반환되어 발생할 수 있는 에러를 방지하기 위해 Optional로 감싼다.
     Member save(Member member);
-    Optional<Member> findById(long id);
+    Optional<Member> findById(Long id);
     Optional<Member> findByName(String name);
     List<Member> findAll();
 
