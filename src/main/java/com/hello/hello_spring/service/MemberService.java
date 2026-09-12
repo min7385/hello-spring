@@ -4,11 +4,13 @@ import com.hello.hello_spring.domain.Member;
 import com.hello.hello_spring.repository.MemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
 
 // ctrl + shift + T: 테이스 케이스 생성
+@Transactional
 public class MemberService {
 
     // 기존: MemberService가 MemoryMemberRepository를 직접 생성하게 함.
