@@ -90,3 +90,29 @@
 **`@Transactional`**: 테스트 후 데이터를 자동으로 롤백하여 DB 상태를 유지한다. 테스트를 반복해서 실행해도 이전 데이터의 영향 없이 항상 동일한 환경에서 테스트할 수 있다.
 </div>
 </details>
+
+<details>
+<summary>24강 - JPA</summary>
+<div markdown="1">
+
+## ORM(Object Relational Mapping)
+
+**ORM(Object Relational Mapping)**
+- 객체와 관계형 데이터베이스의 테이블을 자동으로 매핑해 주는 기술로, 객체지향적인 방식으로 관계형 데이터베이스를 사용할 수 있게 한다.
+
+- Java에서 사용하는 대표적인 ORM 기술로 **JPA**가 있으며, 대표적인 구현체로 `Hibernate`가 있다.
+
+## JPA(Java Persistence API)의 필요성 및 특징
+
+- 스프링 `JdbcTemplate`과 `MyBatis` 같은 기술은 JDBC 리포지토리 구현 시 발생하는 반복적인 코드를 대부분 제거해 주지만, SQL은 직접 작성해야 한다.
+- `JPA`를 사용하면 기존의 반복적인 코드뿐만 아니라 기본적인 SQL 처리도 자동화할 수 있다.
+- **패러다임 전환**: SQL과 데이터 중심의 설계 → 객체 중심의 설계
+- 이를 통해 **개발 생산성을 크게 높일 수 있다.**
+
+## JPQL을 이용한 객체 조회
+
+- 이름이나 전체 회원 조회처럼 **PK 기반이 아닌 조건으로 조회**할 때는 `JPQL`을 사용한다.
+- `JPQL`은 테이블이 아닌 **엔티티 객체를 대상으로 쿼리를 작성**한다.
+- `setParameter`를 사용하여 동적인 값을 전달할 수 있다.
+</div>
+</details>
