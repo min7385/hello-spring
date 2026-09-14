@@ -116,3 +116,29 @@
 - `setParameter`를 사용하여 동적인 값을 전달할 수 있다.
 </div>
 </details>
+
+<details>
+<summary>25강 - 스프링 데이터 JPA</summary>
+<div markdown="1">
+
+## Spring Data JPA
+
+**Spring Data JPA**: 인터페이스만으로도 반복적인 데이터 접근 기능을 자동으로 제공한다.
+
+## `JpaRepository` 활용
+
+- `JpaRepository`를 상속한 인터페이스를 만들고 **엔티티 타입과 ID 타입**을 지정한다.
+- 구현체를 자동으로 생성하고 **스프링 빈으로 등록**해 준다.
+- 개발자는 해당 인터페이스를 의존성 주입받아 사용하면 된다.
+- `save`, `findAll`, `count`, `delete`와 같은 기본적인 데이터 접근 기능이 제공된다.
+
+## 메서드 이름을 이용한 쿼리 생성
+
+- `findByName`, `findByEmail`처럼 **메서드 이름을 규칙에 맞게 작성**하면 조건에 맞는 쿼리가 자동으로 생성된다.
+
+## 복잡한 쿼리 처리
+
+- 복잡하거나 동적인 쿼리는 `QueryDSL`이나 **네이티브 SQL**을 활용할 수 있다.
+- 필요에 따라 `JdbcTemplate`이나 `MyBatis` 같은 기술을 함께 사용할 수도 있다.
+</div>
+</details>
